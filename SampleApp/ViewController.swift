@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
 private extension UIImage {
     static func rectangle(size: CGSize, color: UIColor) -> UIImage {
         return UIImage.create(size: size)
-            .fill(color: .red)
+            .fill(with: .red)
             .render()
     }
 }

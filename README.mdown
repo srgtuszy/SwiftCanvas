@@ -1,0 +1,33 @@
+### Canvas
+
+
+##### Description
+
+Canvas is a Swift library that acts as a wrapper for `CoreGraphics` drawing. If you want to perform any operation involving Core Graphics context, you're forced to use C-style API which doesn't look at all like Swift and can be a pain. `Canvas` aims to bring a swifty API wrapper for `CGContext` operations.
+
+##### Example
+
+Let's assume we want to draw an image with solid background. IOS Developers are pretty usage to solving it this way:
+
+
+```swift
+UIGraphicsBeginImageContext(CGSize(width: 50, height: 50))
+let context = UIGraphicsGetCurrentContext()
+context?.setFillColor(UIColor.red.cgColor)
+context?.fill(CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+if let image = UIGraphicsGetImageFromCurrentImageContext() {
+    //Do something with the image
+}
+UIGraphicsEndImageContext()
+```
+
+with `Canvas`, it's just this
+
+```swift
+let image = UIImage.create(size: CGSize(width: 50, height: 50))
+    .fill(with: .red)
+    .render()
+```
+
+
+See sample app for example usage

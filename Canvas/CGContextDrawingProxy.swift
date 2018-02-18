@@ -44,7 +44,7 @@ final class CGContextDrawingProxy: DrawingProxy {
         return self
     }
     
-    func stroke(rect: CGRect, color: UIColor, width: CGFloat) -> DrawingProxy {
+    func stroke(rect: CGRect, with color: UIColor, width: CGFloat) -> DrawingProxy {
         context.performRetainingState {
             self.context.setStrokeColor(color.cgColor)
             self.context.stroke(rect, width: width)
@@ -53,13 +53,13 @@ final class CGContextDrawingProxy: DrawingProxy {
         return self
     }
     
-    func fill(color: UIColor) -> DrawingProxy {
+    func fill(with color: UIColor) -> DrawingProxy {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
-        return fill(rect: rect, color: color)
+        return fill(rect: rect, with: color)
     }
     
-    func fill(rect: CGRect, color: UIColor) -> DrawingProxy {
+    func fill(rect: CGRect, with color: UIColor) -> DrawingProxy {
         context.performRetainingState {
             self.context.setFillColor(color.cgColor)
             self.context.fill(rect)

@@ -13,27 +13,27 @@ public protocol DrawingProxy {
     func flipVertical() -> DrawingProxy
     func flipHorizontal() -> DrawingProxy
     func draw(image: UIImage) -> DrawingProxy
-    func stroke(rect: CGRect, color: UIColor, width: CGFloat) -> DrawingProxy
-    func fill(rect: CGRect, color: UIColor) -> DrawingProxy
-    func fill(color: UIColor) -> DrawingProxy
+    func stroke(rect: CGRect, with color: UIColor, width: CGFloat) -> DrawingProxy
+    func fill(rect: CGRect, with color: UIColor) -> DrawingProxy
+    func fill(with: UIColor) -> DrawingProxy
     func render() -> UIImage
 }
 
 public extension DrawingProxy {
     func stroke(rect: CGRect) -> DrawingProxy {
-        return stroke(rect: rect, color: Constants.defaultStrokeColor, width: Constants.defaultLineWidth)
+        return stroke(rect: rect, with: Constants.defaultStrokeColor, width: Constants.defaultLineWidth)
     }
     
-    func stroke(rect: CGRect, color: UIColor) -> DrawingProxy {
-        return stroke(rect: rect, color: color, width: Constants.defaultLineWidth)
+    func stroke(rect: CGRect, with color: UIColor) -> DrawingProxy {
+        return stroke(rect: rect, with: color, width: Constants.defaultLineWidth)
     }
     
     func stroke(rect: CGRect, width: CGFloat) -> DrawingProxy {
-        return stroke(rect: rect, color: Constants.defaultStrokeColor, width: width)
+        return stroke(rect: rect, with: Constants.defaultStrokeColor, width: width)
     }
     
     func fill(rect: CGRect) -> DrawingProxy {
-        return fill(rect: rect, color: Constants.defaultFillColor)
+        return fill(rect: rect, with: Constants.defaultFillColor)
     }
 }
 

@@ -70,6 +70,7 @@
 		42197B5A203A2DD800503B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42197B5D203A2DD800503B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42197B5F203A2DD800503B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42AE0513203A37A500249480 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 		42197B23203A2D5200503B64 = {
 			isa = PBXGroup;
 			children = (
+				42AE0513203A37A500249480 /* Playground.playground */,
 				42197B2F203A2D5200503B64 /* Canvas */,
 				42197B52203A2DD800503B64 /* SampleApp */,
 				42197B3A203A2D5300503B64 /* CanvasTests */,
